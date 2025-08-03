@@ -1,0 +1,48 @@
+{
+    "name": "prestashopcorp/ps_accounts",
+    "description": "PS Accounts authentifies stores in the PrestaShop Cloud, which enable secure communications for any PrestaShop modules.",
+    "type": "prestashop-module",
+    "authors": [
+        {
+            "name": "Account team",
+            "email": "account-support@prestashop.com",
+            "homepage": "https://github.com/PrestaShopCorp/ps_accounts",
+            "role": "Maintainer"
+        }
+    ],
+    "license": "AFL-3.0",
+    "config": {
+        "preferred-install": "dist",
+        "platform": {
+            "php": "5.6"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "PrestaShop\\Module\\PsAccounts\\": "src/",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\Firebase\\JWT\\": "vendor/firebase/php-jwt/src",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\Lcobucci\\JWT\\": "vendor/lcobucci/jwt/src",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\Monolog\\": "vendor/monolog/monolog/src/Monolog",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\phpseclib\\": "vendor/phpseclib/phpseclib/phpseclib",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\Psr\\Log\\": "vendor/psr/log/Psr/Log",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\Ramsey\\Uuid\\": "vendor/ramsey/uuid/src",
+            "PrestaShop\\Module\\PsAccounts\\Vendor\\PrestaShopCorp\\LightweightContainer\\": "vendor/prestashopcorp/lightweight-container/src"
+        },
+        "classmap": [
+            "ps_accounts.php",
+            "controllers/"
+        ]
+    },
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "ext-json": "*",  
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "paragonie/random_compat": "^1 | ^2 | ^9.99.99",        
+        "psr/log": "~1.0",
+        "segmentio/analytics-php": "^1.8",
+        "sentry/sentry": "^1.0",
+        "symfony/polyfill-ctype": "^1.8"
+    },
+    "author": "PrestaShop"
+}
